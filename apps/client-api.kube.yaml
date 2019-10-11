@@ -10,6 +10,7 @@ spec:
       targetPort: 8080
       protocol: TCP
   type: LoadBalancer
+  loadBalancerIP: 35.239.100.182
   selector:
     app: client-api
 

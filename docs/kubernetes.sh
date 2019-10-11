@@ -29,3 +29,6 @@ kubectl apply -f apps/data-api.kube.yaml
 
 # DELETE YAML
 kubectl delete -f apps/data-api.kube.yaml
+
+# Debug pod
+kubectl describe pod/$POD
