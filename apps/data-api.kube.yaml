@@ -35,6 +35,12 @@ spec:
         - name: data-api
           image: easylancer/data-api:latest
           imagePullPolicy: Always
+          env:
+            - name: DB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: data-api-config
+                  key: db-uri
           ports:
             - containerPort: 3003
       imagePullSecrets:

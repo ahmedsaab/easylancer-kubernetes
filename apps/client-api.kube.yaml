@@ -37,6 +37,10 @@ spec:
           image: easylancer/client-api:latest
           imagePullPolicy: Always
           env:
+            - name: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWK_ISSUER_URI
+              value: "https://easylancer.eu.auth0.com/"
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"
             - name: DATA_API_URL
               value: "http://data-api.default.svc.cluster.local"
             - name: FILE_API_URL
